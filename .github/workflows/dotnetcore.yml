@@ -26,4 +26,4 @@ jobs:
     - name: Build package
       run: ./build.sh Pack
     - name: Publish
-      run: dotnet nuget push artifacts/*.nupkg -k  ${{ secrets.NUGET_PUSH_KEY }}
+      run: dotnet nuget push artifacts/*.nupkg -k  ${{ secrets.NUGET_PUSH_KEY }} -s https://api.nuget.org/v3/index.json
