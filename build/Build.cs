@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using Nuke.Common;
+using Nuke.Common.CI;
 using Nuke.Common.Execution;
 using Nuke.Common.Git;
 using Nuke.Common.IO;
@@ -64,6 +65,15 @@ class Build : NukeBuild
                 .SetFileVersion(GitVersion.AssemblySemFileVer)
                 .SetInformationalVersion(GitVersion.InformationalVersion)
                 .EnableNoRestore());
+        });
+
+    Target Pack => _ => _
+        .Produces(ArtifactsDirectory / "*.nupkg")
+        .Executes(() =>
+        {
+            DotNetPack(s => s
+                .SetProject(Solution)
+                .SetOutputDirectory(ArtifactsDirectory));
         });
 
 }

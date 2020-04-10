@@ -24,7 +24,7 @@ namespace Piksel.TestUtils.Tests
             Repeat(10, ix =>
             {
                 Assert.AreEqual(i, ix);
-                ix += 1;
+                i += 1;
             });
         }
     }
