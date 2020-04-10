@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Piksel.Testing</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <LangVersion>8.0</LangVersion>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/piksel/testutils</PackageProjectUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <RepositoryUrl>https://github.com/piksel/testutils</RepositoryUrl>
+    <RepositoryType>GIT</RepositoryType>
+    <PackageTags>testing test</PackageTags>
+    <Authors>nils måsén</Authors>
+    <Company>piksel bitworks</Company>
+    <Product>TestUtils</Product>
+    <Description>Various utility classes for writing tests</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\res\icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
